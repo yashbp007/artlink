@@ -1,0 +1,56 @@
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+ENV/
+
+# ─── AI model cache (large files — download on first run) ─────────────────────
+model_cache/
+ai-service-python/model_cache/
+*.bin
+*.safetensors
+*.gguf
+
+# ─── ChromaDB data (generated at runtime) ─────────────────────────────────────
+chroma_data/
+ai-service-python/chroma_data/
+
+# ─── IDE / OS ─────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+.dockerignore
+
+# ─── Java / Spring Boot ──────────────────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+.mvn/
+
+# ─── Node (if React is added later) ──────────────────────────────────────────
+node_modules/
+.next/
+dist/

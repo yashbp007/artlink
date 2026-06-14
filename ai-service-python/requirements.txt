@@ -1,0 +1,26 @@
+# Artist Platform — Python AI Service
+# =====================================
+# All dependencies with pinned major versions for reproducibility.
+# Run: pip install -r requirements.txt
+
+# ── Web framework ──────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9       # required for multipart/form-data (image uploads)
+pydantic==2.7.1
+
+# ── Service 1: Content Moderation ─────────────────────────────────────────────
+detoxify==0.5.2                # text toxicity detection (runs Detoxify 'original' model)
+transformers==4.41.1           # CLIP for image moderation + tagging
+Pillow==10.3.0                 # image loading / preprocessing
+torch==2.3.0                   # required by transformers and CLIP (CPU-only build)
+# For GPU support replace torch line with:
+# torch==2.3.0+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+
+# ── Service 2 + 3: Embeddings + Recommendation ────────────────────────────────
+sentence-transformers==3.0.1   # SentenceTransformer all-MiniLM-L6-v2 embeddings
+chromadb==0.5.0                # vector database (local persistent mode)
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1           # loads .env file into os.environ
+httpx==0.27.0                  # async HTTP client (used if Python needs to call external APIs)
